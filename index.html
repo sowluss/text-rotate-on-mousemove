@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Text Rotate on Mousemove</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Peter Simkus<br><span>Web Developer</span></h1>
+
+
+
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+  
+  $('h1').on('mousemove', function(e) {
+    centerX = $(this).width()/2;
+    let moveX = centerX - e.offsetX;
+    $(this).css({
+      'transform': 'perspective(500px) rotateY('+ moveX/20 + 'deg)'
+    })
+  })
+  
+  </script>
+</body>
+</html>
